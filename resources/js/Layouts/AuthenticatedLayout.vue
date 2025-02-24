@@ -39,6 +39,12 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Dashboard
                                 </NavLink>
+                                <NavLink
+                                    :href="route('words.index')"
+                                    :active="route().current('words.index')"
+                                >
+                                    Words
+                                </NavLink>
                             </div>
                         </div>
 
@@ -145,6 +151,14 @@ const showingNavigationDropdown = ref(false);
                             :active="route().current('dashboard')"
                         >
                             Dashboard
+                        </ResponsiveNavLink>
+                    </div>
+                    <div class="space-y-1 pb-3 pt-2">
+                        <ResponsiveNavLink
+                            :href="route('words.index')"
+                            :active="route().current('words.index')"
+                        >
+                            Words
                         </ResponsiveNavLink>
                     </div>
 
